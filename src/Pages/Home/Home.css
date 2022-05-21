@@ -1,0 +1,53 @@
+.sendEmail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+  margin-bottom: 8em;
+}
+
+.email-container {
+  font-size: 4em;
+}
+
+.email-container a {
+  color: teal;
+  font-weight: bold;
+}
+
+.big-image {
+  margin-bottom: 5em;
+}
+
+.big-image img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 540px) {
+  .sendEmail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    text-align: center;
+  }
+
+  .email-container {
+    font-size: 2em;
+    line-height: 1.6em;
+  }
+
+  .email-container a {
+    color: teal;
+    font-weight: bold;
+  }
+
+  .big-image img {
+      width: 350px;
+    background-size: contain;
+  }
+}
