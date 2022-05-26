@@ -1,12 +1,19 @@
 import React from "react";
 import "../CartIcon/CartIcon.css";
 import IconButton from "@mui/material/IconButton";
+import { Link } from "react-router-dom";
 import { FaShoppingBag } from "react-icons/fa";
 
 function CartIcon() {
   return (
     <div className="carticon">
-      <IconButton size="large" aria-label="profile" className="cartbadge">
+      <IconButton
+        component={Link}
+        to="/cart"
+        size="large"
+        aria-label="cart"
+        className="cartbadge"
+      >
         <FaShoppingBag className="cart-icon" />
         <p>1</p>
       </IconButton>

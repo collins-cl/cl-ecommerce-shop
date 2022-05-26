@@ -13,7 +13,7 @@ function Slideshow() {
         </div>
 
         <div className="slide-shop-now">
-          <a href="/">
+          <a href="/shop">
             SHOP NOW
           </a>
         </div>

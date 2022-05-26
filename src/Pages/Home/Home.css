@@ -2,12 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10em;
-  margin-bottom: 8em;
+  position: relative;
+  height: 100vh;
 }
 
 .email-container {
+  text-align: center;
   font-size: 4em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .email-container a {
@@ -34,6 +40,7 @@
     margin-top: 5em;
     margin-bottom: 5em;
     text-align: center;
+    height: 50vh;
   }
 
   .email-container {

@@ -1,7 +1,9 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
-import Shop from "./Pages/Home/Shop/Shop";
+import Shop from "./Pages/Shop/Shop";
+import Cart from "./Pages/Cart/Cart";
+
 
 function App() {
   return (
@@ -9,8 +11,11 @@ function App() {
       <Router>
         <div className="App"></div>
         <Routes>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/" exact element={<Home/>}/>
           <Route path="/shop" element={<Shop/>}/>
+          <Route path="/cart" exact element={<Cart/>}/>
+          <Route path="/#email"/>
+          <Route path="/shop:id"/>
         </Routes>
       </Router>
     </>

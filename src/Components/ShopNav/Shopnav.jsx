@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import "../NavBar/Navbar.css";
+import "../ShopNav/Shopnav.css"
 import ProfileIcon from "../ProfileIcon/ProfileIcon";
 import CartIcon from "../CartIcon/CartIcon";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-function NavBar() {
-  const location = useLocation();
-
+function Shopnav() {
   const [navwrapper, setNavWrapper] = useState(false);
 
   const changeBackground = () => {
@@ -42,35 +40,32 @@ function NavBar() {
           <div className="logo">
             <a href="/">CL COMESTIBLES</a>
           </div>
-            <div className="icons-events">
-              <ProfileIcon />
-              {location.pathname==="/cart" ? null : (<CartIcon />)}
-            </div>
+          <div className="icons-events">
+            <ProfileIcon />
+            <CartIcon />
+          </div>
         </div>
 
-        <div className={open ? "secondnav" : "secondnav active"}>
+        <div className={open ? "secondshopnav" : "secondshopnav active"}>
           <Link to="/" onClick={closeMobile}>
-            FASTFOOD
+            RICE
+          </Link>
+          <Link to="/shop/#pasta" onClick={closeMobile}>
+            PASTA
           </Link>
           <Link to="/" onClick={closeMobile}>
-            SHOP
+            PANCAKES
           </Link>
           <Link to="/" onClick={closeMobile}>
-            LOCATE A SHOP
+            KETONE-DIETS
           </Link>
-          <Link to="/" onClick={closeMobile}>
-            FLASHSALE
+          <Link className="bhome" to="/" onClick={closeMobile}>
+            BACK HOME
           </Link>
-          <Link to="/" onClick={closeMobile}>
-            CONTACTS
-          </Link>
-          <a href="/#email" onClick={closeMobile}>
-            EMAIL
-          </a>
         </div>
       </div>
     </div>
   );
 }
 
-export default NavBar;
+export default Shopnav;

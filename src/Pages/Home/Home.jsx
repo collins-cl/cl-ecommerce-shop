@@ -28,7 +28,7 @@ function Home() {
       <Offers />
       <Acknowledge />
       <Picks />
-      <div className="sendEmail">
+      <div className="sendEmail" id="email">
         <div className="email-container">
           send an email to <a href="mailto:">@CLCOMESTIBLES</a>
         </div>

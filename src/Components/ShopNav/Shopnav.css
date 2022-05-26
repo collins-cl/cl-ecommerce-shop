@@ -4,7 +4,7 @@
   z-index: 30;
   width: 100%;
   background-color: white;
-  border-bottom: 1px solid teal;
+  border-bottom: 2px solid teal;
 }
 
 .navwrapper.active {
@@ -45,7 +45,7 @@
   padding-right: 2em;
 }
 
-.secondnav.active {
+.secondshopnav.active {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,43 +54,38 @@
   position: relative;
 }
 
-.secondnav.active a {
+.secondshopnav.active a {
   font-size: 13px;
   font-family: "Roboto";
   font-weight: 500;
   transition: all 1s ease;
 }
 
-.secondnav.active a:nth-child(1)::after{
-  width: 5.8em;
-  margin-left: -5.4em;
-}
-
-.secondnav.active a:nth-child(2)::after{
-  width: 3em;
+.secondshopnav.active a:nth-child(1)::after {
+  width: 3.3em;
   margin-left: -2.8em;
 }
 
-.secondnav.active a:nth-child(3)::after{
-  width: 7em;
-  margin-left: -7.4em;
+.secondshopnav.active a:nth-child(2)::after {
+  width: 3.4em;
+  margin-left: -3.1em;
 }
 
-.secondnav.active a:nth-child(4)::after{
-  width: 5.5em;
-  margin-left: -5.5em;
-}
-
-.secondnav.active a:nth-child(5)::after{
-  width: 4.8em;
+.secondshopnav.active a:nth-child(3)::after {
+  width: 5em;
   margin-left: -5em;
 }
-.secondnav.active a:nth-child(6)::after{
-  width: 3em;
-  margin-left: -3em;
+
+.secondshopnav.active a:nth-child(4)::after {
+  width: 5.8em;
+  margin-left: -6.4em;
 }
 
-.secondnav.active a::after{
+.bhome{
+    display: none;
+}
+
+.secondshopnav.active a::after {
   position: absolute;
   content: "";
   height: 1px;
@@ -98,10 +93,9 @@
   margin-top: 18px;
   margin-left: -3.5em;
   background-color: teal;
-
 }
 
-.secondnav.active a:hover {
+.secondshopnav.active a:hover {
   /* font-weight: bold; */
   color: teal;
 }
@@ -139,11 +133,11 @@
     padding-right: 0;
   }
 
-  .secondnav.active {
+  .secondshopnav.active {
     display: none;
   }
 
-  .secondnav {
+  .secondshopnav {
     display: flex;
     flex-direction: column;
     gap: 3em;
@@ -152,32 +146,32 @@
     margin-left: 20px;
   }
 
-  .secondnav a:hover {
+  .secondshopnav a:hover {
     color: teal;
   }
 
-  .secondnav a:nth-child(1) {
+  .secondshopnav a:nth-child(1) {
     font-size: 20px;
     font-weight: bold;
   }
-  .secondnav a:nth-child(2) {
+  .secondshopnav a:nth-child(2) {
     font-size: 23px;
     font-weight: bold;
   }
-  .secondnav a:nth-child(3) {
+  .secondshopnav a:nth-child(3) {
     font-size: 24px;
     font-weight: bold;
   }
-  .secondnav a:nth-child(4) {
+  .secondshopnav a:nth-child(4) {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  .secondshopnav a:nth-child(5) {
     font-size: 28px;
     font-weight: bold;
   }
-  .secondnav a:nth-child(5) {
-    font-size: 30px;
-    font-weight: bold;
-  }
-  .secondnav a:nth-child(6) {
-    font-size: 35px;
-    font-weight: bold;
+
+  .bhome{
+      display: block;
   }
 }
