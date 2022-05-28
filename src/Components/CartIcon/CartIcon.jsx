@@ -4,7 +4,7 @@ import IconButton from "@mui/material/IconButton";
 import { Link } from "react-router-dom";
 import { FaShoppingBag } from "react-icons/fa";
 
-function CartIcon() {
+function CartIcon({count}) {
   return (
     <div className="carticon">
       <IconButton
@@ -15,7 +15,7 @@ function CartIcon() {
         className="cartbadge"
       >
         <FaShoppingBag className="cart-icon" />
-        <p>1</p>
+        <p>{count}</p>
       </IconButton>
     </div>
   );

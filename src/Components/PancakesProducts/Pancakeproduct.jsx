@@ -24,15 +24,17 @@ const Pancakeproduct = () => {
     </div>
   );
   return (
-    <div className="pancakeproduct">
-      <div className="inner">
-        <div className="pp-heading">Pancakes</div>
-        <div className="pp-description">
-          Premium quality food, straight from the farm made from rich <br />{" "}
-          pancakes and rice miils to suit your taste.
+    <div className="pancake-container">
+      <div className="pancakeproduct" id="pancake">
+        <div className="inner">
+          <div className="pp-heading">Pancakes</div>
+          <div className="pp-description">
+            Premium quality food, straight from the farm made from rich <br />{" "}
+            pancakes and rice miils to suit your taste.
+          </div>
         </div>
+        {isLive ? <OfflineCart /> : <OnlineCart />}
       </div>
-      {isLive ? <OfflineCart/> : <OnlineCart/>}
     </div>
   );
 };

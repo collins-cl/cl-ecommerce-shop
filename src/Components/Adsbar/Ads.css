@@ -28,7 +28,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (min-width:320px) and (max-width: 540px) {
     .ads{ 
         height: 35px;
     }

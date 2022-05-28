@@ -2,7 +2,7 @@ import React from "react";
 import "../PastaItem/Pastaitem.css";
 import {MdAddShoppingCart} from "react-icons/md"
 
-const Pastaitem = ({pasta}) => {
+const Pastaitem = ({pasta, dispatch}) => {
   return (
     <div className="pastaitem">
       <div className="pastaitem-wrapper">
@@ -14,7 +14,7 @@ const Pastaitem = ({pasta}) => {
           {pasta.description}
         </div>
         <div className="pastaitem-price">{pasta.price}</div>
-        <div className="pastaitem-cart"><MdAddShoppingCart className="addtocart"/></div>
+        <div className="pastaitem-cart" onClick={()=>dispatch('increment')}><MdAddShoppingCart className="addtocart"/></div>
       </div>
     </div>
   );

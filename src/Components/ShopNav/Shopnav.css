@@ -55,9 +55,9 @@
 }
 
 .secondshopnav.active a {
-  font-size: 13px;
+  font-size: 12px;
   font-family: "Roboto";
-  font-weight: 500;
+  font-weight: bold;
   transition: all 1s ease;
 }
 
@@ -84,6 +84,11 @@
 .bhome{
     display: none;
 }
+
+.active{
+  color: teal;
+}
+
 
 .secondshopnav.active a::after {
   position: absolute;

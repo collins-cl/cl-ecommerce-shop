@@ -5,7 +5,7 @@ import CartIcon from "../CartIcon/CartIcon";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-function NavBar() {
+function NavBar({count}) {
   const location = useLocation();
 
   const [navwrapper, setNavWrapper] = useState(false);
@@ -40,11 +40,11 @@ function NavBar() {
             {open ? hamburgerClose : hamburgerOpen}
           </div>
           <div className="logo">
-            <a href="/">CL COMESTIBLES</a>
+            <a href="/home">CL COMESTIBLES</a>
           </div>
             <div className="icons-events">
               <ProfileIcon />
-              {location.pathname==="/cart" ? null : (<CartIcon />)}
+              {location.pathname==="/home" ?  (<CartIcon count={count} />) : null}
             </div>
         </div>
 

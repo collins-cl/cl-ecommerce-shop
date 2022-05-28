@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "../ShopNav/Shopnav.css"
 import ProfileIcon from "../ProfileIcon/ProfileIcon";
 import CartIcon from "../CartIcon/CartIcon";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-function Shopnav() {
+function Shopnav({count}) {
   const [navwrapper, setNavWrapper] = useState(false);
 
   const changeBackground = () => {
@@ -38,30 +38,30 @@ function Shopnav() {
             {open ? hamburgerClose : hamburgerOpen}
           </div>
           <div className="logo">
-            <a href="/">CL COMESTIBLES</a>
+            <a href="/home">CL COMESTIBLES</a>
           </div>
           <div className="icons-events">
             <ProfileIcon />
-            <CartIcon />
+            <CartIcon count={count} />
           </div>
         </div>
 
         <div className={open ? "secondshopnav" : "secondshopnav active"}>
-          <Link to="/" onClick={closeMobile}>
+          <Link activeClass="active" spy={true} to="rice" onClick={closeMobile}>
             RICE
           </Link>
-          <Link to="/shop/#pasta" onClick={closeMobile}>
+          <Link spy={true} to="pasta" onClick={closeMobile}>
             PASTA
           </Link>
-          <Link to="/" onClick={closeMobile}>
+          <Link spy={true} to="pancake" onClick={closeMobile}>
             PANCAKES
           </Link>
-          <Link to="/" onClick={closeMobile}>
+          <Link spy={true} to="ketone-diets" onClick={closeMobile}>
             KETONE-DIETS
           </Link>
-          <Link className="bhome" to="/" onClick={closeMobile}>
+          <a href="/" className="bhome" onClick={closeMobile}>
             BACK HOME
-          </Link>
+          </a>
         </div>
       </div>
     </div>
